@@ -27,15 +27,11 @@
 
 <template>
   <div>
-    <landing-page></landing-page>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import LandingPage from './components/LandingPageView'
   export default {
-    components: {
-      LandingPage
-    }
   }
 </script>

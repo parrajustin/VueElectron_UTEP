@@ -23,10 +23,12 @@ if (is.dev()) {
   config.url = `http://localhost:${config.port}`;
 
   // sets save data to this directory
-  app.setPath('userData', jet.cwd() + '/appData');
+  app.setPath('userData', jet.cwd() + '/appData/' + app.getVersion());
 } else {
   config.devtron = false;
   config.url = `file://${__dirname}/dist/index.html`;
+
+  app.setPath('userData', app.getPath('userData') + '/' + app.getVersion());
 }
 
 /**
@@ -34,15 +36,12 @@ if (is.dev()) {
  *   @method setApplicationMenu
  */
 const setApplicationMenu = function() {
-  let menus = [edit];
+  const menus = [edit];
   if (is.dev())
     menus.push(dev);
+
   Menu.setApplicationMenu(Menu.buildFromTemplate(menus));
 };
-
-
-let userDataPath = app.getPath('userData');
-app.setPath('userData', userDataPath);
 
 
 /** Creates the Main window */
@@ -64,16 +63,12 @@ function createWindow() {
   if (is.dev()) {
     BrowserWindow.addDevToolsExtension(path.join(__dirname, '../node_modules/devtron'));
 
-    let installExtension = require('electron-devtools-installer');
+    const installExtension = require('electron-devtools-installer');
+    const {VUEJS_DEVTOOLS} = require('electron-devtools-installer');
 
-    installExtension.default(installExtension.VUEJS_DEVTOOLS)
-      .then((name) => mainWindow.webContents.openDevTools())
+    installExtension.default(VUEJS_DEVTOOLS)
+      .then((name) => console.log(`Added Extension:  ${name}`))
       .catch((err) => console.log('An error occurred: ', err));
-  } else {
-    mainWindow.webPreferences.devTools = false;
-    mainWindow.webContents.on('devtools-opened', () => {
-      mainWindow.webContents.closeDevTools();
-    });
   }
 
   mainWindow.on('closed', () => {
@@ -110,7 +105,7 @@ app.on('window-all-closed', function() {
 });
 
 app.on('activate', function() {
-  if (mainWindow === null ) {
+  if (mainWindow === null) {
     createWindow();
   }
 });

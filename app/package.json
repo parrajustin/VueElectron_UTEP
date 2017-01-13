@@ -7,7 +7,8 @@
     "electron-is": "^2.4.0",
     "fs-jetpack": "^0.10.5",
     "nedb": "^1.8.0",
-    "vue": "^2.1.8"
+    "vue": "^2.1.8",
+    "vue-router": "^2.1.1"
   },
   "devDependencies": {},
   "author": "Justin Parra <parra.justin.main@gmail.com> (https://github.com/parrajustin)"

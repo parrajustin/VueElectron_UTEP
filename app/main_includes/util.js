@@ -2,7 +2,6 @@
 const jet = require('fs-jetpack');
 const {app, BrowserWindow} = require('electron');
 
-
 //
 //                                             iiii
 //                                            i::::i

@@ -1893,7 +1893,7 @@ eslint-config-vue@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/eslint-config-vue/-/eslint-config-vue-2.0.1.tgz#da872f1399c7812aa2ce3fc2dd26f83a31f33b4f"
 
-eslint-plugin-html@^1.5.2:
+eslint-plugin-html@^1.5.2, eslint-plugin-html@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-1.7.0.tgz#2a5b03884d8d56adf9ad9864e9c036480fb629c9"
   dependencies:

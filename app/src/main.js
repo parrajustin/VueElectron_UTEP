@@ -1,10 +1,19 @@
-import Vue from 'vue'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.config.debug = true
+Vue.use(Router);
+Vue.config.debug = true;
 
-import App from './App'
+import App from './App';
+import routes from './routes';
+
+const router = new Router({
+  scrollBehavior: () => ({ y: 0 }),
+  routes
+})
 
 /* eslint-disable no-new */
 new Vue({
-  ...App
-}).$mount('#app')
+  router,
+  ...App,
+}).$mount('#app');

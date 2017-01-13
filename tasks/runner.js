@@ -9,7 +9,7 @@ const exec = require('child_process').exec;
 const treeKill = require('tree-kill');
 
 let YELLOW = '\x1b[33m';
-let BLUE = '\x1b[34m';
+let BLUE = '\x1b[36m';
 let END = '\x1b[0m';
 
 let isElectronOpen = false;
