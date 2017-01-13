@@ -1,0 +1,14 @@
+{
+  "name": "UTEP_Classes",
+  "version": "0.0.1",
+  "description": "University of Texas Schedule examinar",
+  "main": "electron.js",
+  "dependencies": {
+    "electron-is": "^2.4.0",
+    "fs-jetpack": "^0.10.5",
+    "nedb": "^1.8.0",
+    "vue": "^2.1.8"
+  },
+  "devDependencies": {},
+  "author": "Justin Parra <parra.justin.main@gmail.com> (https://github.com/parrajustin)"
+}
