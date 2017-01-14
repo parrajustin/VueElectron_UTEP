@@ -1,15 +1,15 @@
 {
-  "name": "UTEP_Classes",
-  "version": "0.0.1",
-  "description": "University of Texas Schedule examinar",
-  "main": "electron.js",
-  "dependencies": {
-    "electron-is": "^2.4.0",
-    "fs-jetpack": "^0.10.5",
-    "nedb": "^1.8.0",
-    "vue": "^2.1.8",
-    "vue-router": "^2.1.1"
+  "name": "electron-react-boilerplate",
+  "productName": "electron-react-boilerplate",
+  "version": "1.0.0",
+  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "main": "./main.js",
+  "author": {
+    "name": "C. T. Lin",
+    "email": "chentsulin@gmail.com",
+    "url": "https://github.com/chentsulin"
   },
-  "devDependencies": {},
-  "author": "Justin Parra <parra.justin.main@gmail.com> (https://github.com/parrajustin)"
+  "license": "MIT",
+  "dependencies": {
+  }
 }
