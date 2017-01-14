@@ -11,5 +11,6 @@
   },
   "license": "MIT",
   "dependencies": {
+    "fs-jetpack": "^0.10.5"
   }
 }
