@@ -1,5 +1,7 @@
 ## Run
 
+Install nodejs before continuing. 
+
 Run these two commands __simultaneously__ in different console tabs.
 
 ```bash
@@ -12,7 +14,6 @@ or run two servers with one command
 ```bash
 $ npm run dev
 ```
-
 
 ## Packaging
 
